@@ -1,0 +1,71 @@
+=== Suite started at 2013-10-12 16:13:01
+=== Starting test, 2 test cases
+=cases         2
+=user          nifty
+=host          falcor
+=hosts         falcor 
+=emulator_vsn  5.10.3
+=emulator      beam
+=otp_release   R16B02
+=started       2013-10-12 16:13:01
+=case          simple_cache_SUITE:init_per_suite
+=logfile       simple_cache_suite.init_per_suite.html
+=started       2013-10-12 16:13:01
+=ended         2013-10-12 16:13:01
+=result        ok
+=elapsed       0.002741
+=case          simple_cache_SUITE:insert_case
+=logfile       simple_cache_suite.insert_case.html
+=started       2013-10-12 16:13:01
+=ended         2013-10-12 16:13:01
+=result        ok
+=elapsed       5.07e-4
+=case          simple_cache_SUITE:delete_case
+=logfile       simple_cache_suite.delete_case.html
+=started       2013-10-12 16:13:01
+=ended         2013-10-12 16:13:01
+=result        failed: {{assertMatch_failed,
+                            [{module,simple_cache_SUITE},
+                             {line,29},
+                             {expression,"simple_cache : lookup ( foo )"},
+                             {pattern,"undefined"},
+                             {value,{error,not_found}}]},
+                        [{simple_cache_SUITE,'-delete_case/1-fun-0-',0,
+                             [{file,"simple_cache_SUITE.erl"},{line,29}]},
+                         {simple_cache_SUITE,delete_case,1,
+                             [{file,"simple_cache_SUITE.erl"},{line,29}]},
+                         {test_server,ts_tc,3,
+                             [{file,"test_server.erl"},{line,1358}]},
+                         {test_server,run_test_case_eval1,6,
+                             [{file,"test_server.erl"},{line,975}]},
+                         {test_server,run_test_case_eval,9,
+                             [{file,"test_server.erl"},{line,924}]}]}, [{simple_cache_SUITE,
+                                                                         '-delete_case/1-fun-0-',
+                                                                         29},
+                                                                        {simple_cache_SUITE,
+                                                                         delete_case,
+                                                                         29},
+                                                                        {test_server,
+                                                                         ts_tc,
+                                                                         1358},
+                                                                        {test_server,
+                                                                         run_test_case_eval1,
+                                                                         975},
+                                                                        {test_server,
+                                                                         run_test_case_eval,
+                                                                         924}]
+=== *** FAILED *** test case 2 of 2
+=case          simple_cache_SUITE:end_per_suite
+=logfile       simple_cache_suite.end_per_suite.html
+=started       2013-10-12 16:13:01
+=ended         2013-10-12 16:13:02
+=result        ok
+=elapsed       1.0e-6
+=group_time    0.093s
+=== TEST COMPLETE, 1 ok, 1 failed of 2 test cases
+
+=finished      2013-10-12 16:13:02
+=failed        1
+=successful    1
+=user_skipped  0
+=auto_skipped  0

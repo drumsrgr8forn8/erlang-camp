@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Test simple_cache_SUITE:delete_case result</title>
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../../ct_default.css" type="text/css">
+<script type="text/javascript" src="../../jquery-latest.js"></script>
+<script type="text/javascript" src="../../jquery.tablesorter.min.js"></script>
+</head>
+<body>
+
+=== <a href="simple_cache_suite.src.html#delete_case-1">source code for simple_cache_SUITE:delete_case/1</a>
+
+<pre>
+<a name="top"></a>
+=== Test case started with:
+simple_cache_SUITE:delete_case([{watchdog,<0.119.0>},
+                                {tc_logfile,
+                                    "/home/nifty/code/erlang-camp/testing/simple_cache/logs/ct_run.ct@falcor.2013-10-12_16.25.49/testing.simple_cache.logs/run.2013-10-12_16.25.49/simple_cache_suite.delete_case.html"},
+                                {tc_group_properties,[]},
+                                {tc_group_path,[]},
+                                {data_dir,
+                                    "/home/nifty/code/erlang-camp/testing/simple_cache/test/simple_cache_SUITE_data/"},
+                                {priv_dir,
+                                    "/home/nifty/code/erlang-camp/testing/simple_cache/logs/ct_run.ct@falcor.2013-10-12_16.25.49/testing.simple_cache.logs/run.2013-10-12_16.25.49/log_private/"}])
+
+=== Current directory is "/home/nifty/code/erlang-camp/testing/simple_cache/logs/ct_run.ct@falcor.2013-10-12_16.25.49"
+
+=== Started at 2013-10-12 16:25:49
+
+<br />
+
+<div class="error_logger"><b>*** System report during simple_cache_SUITE:delete_case/1 2013-10-12 16:25:49.264 ***</b>
+
+=INFO REPORT==== 12-Oct-2013::11:25:49 ===
+replace(foo, bar)
+
+</div>
+
+<div class="ct_error_notify"><b>*** CT Error Notification 2013-10-12 16:25:49.265 ***</b>
+simple_cache_SUITE:'-delete_case/1-fun-0-' failed on line 29
+Reason: assertMatch_failed
+
+<a href="#end">Full error description and stacktrace</a>
+</div>
+
+<div class="error_logger"><b>*** System report during simple_cache_SUITE:delete_case/1 2013-10-12 16:25:49.265 ***</b>
+
+=INFO REPORT==== 12-Oct-2013::11:25:49 ===
+delete(foo)
+
+</div>
+
+<div class="error_logger"><b>*** System report during simple_cache_SUITE:delete_case/1 2013-10-12 16:25:49.265 ***</b>
+
+=INFO REPORT==== 12-Oct-2013::11:25:49 ===
+lookup(foo)
+
+</div>
+
+<div class="error_logger"><b>*** System report during simple_cache_SUITE:delete_case/1 2013-10-12 16:25:49.266 ***</b>
+
+=ERROR REPORT==== 12-Oct-2013::11:25:49 ===
+** Generic server <0.130.0> terminating 
+** Last message in was {'$gen_cast',delete}
+** When Server state == {state,bar,86400,63548814349}
+** Reason for termination == 
+** {{badrecord,dict},
+    [{dict,get_slot,2,[{file,"dict.erl"},{line,396}]},
+     {dict,erase,2,[{file,"dict.erl"},{line,161}]},
+     {sc_element,terminate,2,[{file,"src/sc_element.erl"},{line,79}]},
+     {gen_server,terminate,6,[{file,"gen_server.erl"},{line,719}]},
+     {proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+
+</div>
+<a name="end"></a>
+
+
+=== Ended at 2013-10-12 16:25:49
+=== location [{simple_cache_SUITE,'-delete_case/1-fun-0-',<a href="simple_cache_suite.src.html#29">29</a>},
+              {simple_cache_SUITE,delete_case,<a href="simple_cache_suite.src.html#29">29</a>},
+              {test_server,ts_tc,1358},
+              {test_server,run_test_case_eval1,975},
+              {test_server,run_test_case_eval,924}]
+=== reason = {assertMatch_failed,
+                     [{module,simple_cache_SUITE},
+                      {line,29},
+                      {expression,"simple_cache : lookup ( foo )"},
+                      {pattern,"undefined"},
+                      {value,{error,not_found}}]}
+  in function  simple_cache_SUITE:'-delete_case/1-fun-0-'/0 (simple_cache_SUITE.erl, line 29)
+  in call from simple_cache_SUITE:delete_case/1 (simple_cache_SUITE.erl, line 29)
+  in call from test_server:ts_tc/3 (test_server.erl, line 1358)
+  in call from test_server:run_test_case_eval1/6 (test_server.erl, line 975)
+  in call from test_server:run_test_case_eval/9 (test_server.erl, line 924)
+</pre>
+<center>
+<br /><hr /><p>
+<a href="../../../all_runs.html">Test run history
+</a>  |  <a href="../../../index.html">Top level test index
+</a>
+</p>
+<div class="copyright">Copyright &copy; 2013 <a href="http://www.erlang.org">Open Telecom Platform</a><br />
+Updated: <!date>Sat Oct 12 2013 16:25:49<!/date><br />
+</div>
+</center>
+</body>
+</html>
