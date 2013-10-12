@@ -17,3 +17,14 @@ lookup(Store, Key) ->
 
 delete(Store, Key) ->
     dict:erase(Key, Store).
+
+%%%=======================
+-ifndef(NOTEST).
+-include_lib("eunit/include/eunit.hrl").
+
+insert_test() ->
+  Dict0 = init(),
+  Dict1 = insert(Dict0, key, value),
+  ?assertMatch({ok, value}, lookup(Dict1, key)).
+
+-endif.
